@@ -13,8 +13,8 @@
 	게시글을 수정했습니다.
 	<br>
 	<div class="hidden_div">${ ctxPath = pageContext.request.contextPath }</div>
-	<a href=" ${ctxPath}/article/list.do">[게시글 목록보기]</a>
-	<a href=" ${ctxPath}/article/read.do?no=${modReq.articleNumber}">
+	<a href=" ${ctxPath}/unit/list.do">[게시글 목록보기]</a>
+	<a href=" ${ctxPath}/unit/read.do?no=${unit.no}">
 	[게시글 내용보기]</a>
 </body>
 </html>

@@ -17,48 +17,48 @@
 		
 		<p>
 			상호명 : <br />
-			<input name="content" type=text value= ${unit.name }/>
+			<input name="name" type=text value= ${unit.name } />
 		</p>
 		
 		<p>
 			임차인 : <br />
-			<input name="content" type=text value=  ${unit.hire }/>
+			<input name="hire" type=text value=  ${unit.hire } />
 		</p>
 		
 		
 		<p>
 			임대인 : <br />
-			<input name="content" type=text value=${unit.lease }/>
+			<input name="lease" type=text value=${unit.lease } />
 		</p>
 		
 		
 		<p>
 			임대료 : <br />
-			<input name="content" type=text value= ${unit.rent_fee }/>
+			<input name="rent_fee" type=text value= ${unit.rent_fee } />
 		</p>
 		
 		
 		<p>
 			사용기간 : <br />
-			<input name="content" type=text value= ${unit.period }/>
+			<input name="period" type=text value= ${unit.period } />
 		</p>
 		
 		
 		<p>
 			면적 : <br />
-			<input name="content" type=text value= ${unit.size }/>
+			<input name="size" type=text value= ${unit.size } />
 		</p>
 		
 		
 		<p>
 			입주일 : <br />
-			<input name="content" type=text value= ${unit.coming }/>
+			<input name="coming" type=date value= ${unit.coming } />
 		</p>
 		
 		
 		<p>
 			계약기간 : <br />
-			<input name="content" type=text value= ${unit.leaving }/>
+			<input name="leaving" type=text value="0000-00-00" />
 		</p>
 		
 		

@@ -12,18 +12,13 @@ import unit.model.Unit;
 public class ModifyUnitService {
 	private UnitDAO unitDao = new UnitDAO();
 	
-	public void modify(int no) {
+	public void modify(Unit unit1) {
 		Connection conn =null;
 		try {
 			conn =ConnectionProvider.getConnection();
 			conn.setAutoCommit(false);
 			
-			Unit unit = unitDao.SelectByNo(conn, no);
-		if(unit ==null) {
-				throw new UnitNotFoundException();
-			}
-		
-		unitDao.update(conn, unit);
+			unitDao.update(conn, unit1);
 		conn.commit();
 		}catch(SQLException e) {
 			JdbcUtil.rollback(conn);

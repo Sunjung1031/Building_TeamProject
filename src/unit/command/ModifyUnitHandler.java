@@ -66,7 +66,7 @@ public class ModifyUnitHandler implements CommandHandler {
 			return FORM_VIEW;
 		}
 		try {
-			modifyService.modify(no);
+			modifyService.modify(unit);
 			return "/WEB-INF/view/modifySuccess.jsp";
 		} catch (UnitNotFoundException e) {
 			res.sendError(HttpServletResponse.SC_NOT_FOUND);

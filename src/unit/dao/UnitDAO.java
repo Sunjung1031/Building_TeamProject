@@ -78,7 +78,7 @@ public class UnitDAO {
 	
 	public void update(Connection conn, Unit unit) throws SQLException {
 		try (PreparedStatement pstmt = conn.prepareStatement(
-				"update unit set name=?, hire=?, lease=?" + "rent_fee=?, period=?, size=?, coming=?, leaving=?  where no=?")) {
+				"update unit set name=?, hire=?, lease=?, rent_fee=?, period=?, size=?, coming=?, leaving=?  where no=?")) {
 			pstmt.setString(1, unit.getName());
 			pstmt.setString(2, unit.getHire());
 			pstmt.setString(3, unit.getLease());
