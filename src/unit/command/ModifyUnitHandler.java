@@ -54,7 +54,6 @@ public class ModifyUnitHandler implements CommandHandler {
 		String noVal = req.getParameter("no");
 		int no = Integer.parseInt(noVal);
 		Unit unit = readService.getContent(no);
-		System.out.println(unit);
 		unit = new Unit(unit.getNo(), req.getParameter("name"), req.getParameter("hire"), req.getParameter("lease"),
 				Integer.parseInt(req.getParameter("rent_fee")), req.getParameter("period"),
 				Integer.parseInt(req.getParameter("size")));

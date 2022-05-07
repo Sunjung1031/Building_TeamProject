@@ -12,7 +12,7 @@
 <body>
 	<form action="modify.do?no=${unit.no}" method="post">
 		<p>
-			번호 : <br />${unit.no}
+			호실 : <br />${unit.no}
 		</p>
 		
 		<p>
@@ -52,7 +52,7 @@
 		
 		<p>
 			입주일 : <br />
-			<input name="coming" type=date value= ${unit.coming } />
+			<input name="coming" type=text value= ${unit.coming } readonly />
 		</p>
 		
 		

@@ -121,13 +121,21 @@ public class UnitDAO {
 			    rs.getDate("coming"),
 				rs.getDate("leaving"));
 	}
-	public int delete(Connection conn, int no) throws SQLException {
+	public void delete(Connection conn,Unit unit) throws SQLException {
 		try (PreparedStatement pstmt = conn.prepareStatement(
-				"update unit set name=관리인, hire=임차인, lease=? rent_fee=0, period=0, size=?, coming=?  where no=?")) {
-//			pstmt.setString(1, unit.getName());
+				"update unit set name=\"cos\" , hire=\"임차인\", lease=?, rent_fee=0, period=0, size=?, coming=?, leaving=? where no = ?")) {
+
+
+			pstmt.setString(1, unit.getLease());
+			pstmt.setInt(2, unit.getSize());
+			pstmt.setDate(3, unit.getComing());
+			pstmt.setDate(4, unit.getLeaving());
+			pstmt.setInt(5, unit.getNo());
+			
+			//pstmt.setString(1, unit.getName());
+			
 
 			pstmt.executeUpdate();
-			return 2;
 		}
 	}
 }
